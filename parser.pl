@@ -9,7 +9,7 @@
 /* Prolog Lab 3 parser                                  */
 /******************************************************************************/
 
-prog       --> prog_head, var_part, stat_part.
+prog          --> prog_head, var_part, stat_part.
 
 /******************************************************************************/
 /* Program Header                                                             */
@@ -30,10 +30,10 @@ type         --> integer | real | boolean.
 /******************************************************************************/
 stat_part    --> begin, stat_list, end, dot.
 stat_list	 --> stat | stat, semicolon, stat_list.
-stat		 --> assign_stat.
+stat		    --> assign_stat.
 assign_stat	 --> id, assign_op, expr.
-expr		 --> term | term, add, expr.
-term		 --> factor | factor, mult, term.
+expr		    --> term | term, add, expr.
+term		    --> factor | factor, mult, term.
 factor		 --> leftp, expr, rightp | operand.
 operand		 --> id | number.
 
