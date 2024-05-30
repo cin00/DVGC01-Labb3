@@ -28,14 +28,14 @@ type         --> integer | real | boolean.
 /******************************************************************************/
 /* Stat part                                                                  */
 /******************************************************************************/
-stat_part    --> begin, stat_list, end, dot.
-stat_list	 --> stat | stat, semicolon, stat_list.
-stat		    --> assign_stat.
-assign_stat	 --> id, assign_op, expr.
-expr		    --> term | term, add, expr.
-term		    --> factor | factor, mult, term.
-factor		 --> leftp, expr, rightp | operand.
-operand		 --> id | number.
+stat_part   --> begin, stat_list, end, dot.
+stat_list   --> stat | stat, semicolon, stat_list.
+stat        --> assign_stat.
+assign_stat --> id, assign_op, expr.
+expr        --> term | term, add, expr.
+term        --> factor | factor, mult, term.
+factor      --> leftp, expr, rightp | operand.
+operand     --> id | number.
 
 
 /******************************************************************************/
